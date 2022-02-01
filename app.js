@@ -1,30 +1,33 @@
 'use strict'
 
+//////////////////
 // define the variable named "name" and set the value to the user input of the prompt
-let name = prompt('What is your name?');
-console.log('Hello, ' + name);
-
-let time = prompt('What time is it?'); // 15;
-
-// new variable named message equal to an empty string
-let message = '';
-
-/*
-This is a conditional statement determining the value
-of message dependant upon the user input of time from
-the prompt
-*/
-
-if(time <= 11){
-    message = 'Good Morning!';
-} else if (time <= 18){
-    message = 'Good Afternoon!';
-  
-}  else if(time <= 24){
-    message = "Good Evening!";
-} else {
-    message = "Time does not exist!";
+function yourName(){
+    let name = prompt('What is your name?');
+    console.log('Hello, ' + name);
+    return name;
 }
 
-console.log('Amanda was here');
-document.write('Hello ' + name + '! ' + message);
+
+function timeOfDay(){
+    let time = prompt('What time is it?'); // 15;
+    let message = '';
+    
+    if(time <= 11){
+        message = 'Good Morning!';
+    } else if (time <= 18){
+        message = 'Good Afternoon!';
+      
+    }  else if(time <= 24){
+        message = "Good Evening!";
+    } else {
+        message = "Time does not exist!";
+    }
+
+    return message;
+}
+
+function tellMeAStory(){
+
+    return 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mauris nunc congue nisi vitae. Sit amet dictum sit amet. Non sodales neque sodales ut etiam sit amet nisl. Scelerisque viverra mauris in aliquam sem fringilla ut. Aliquet risus feugiat in ante. Vitae suscipit tellus mauris a diam maecenas sed enim ut. Nisl nisi scelerisque eu ultrices. In massa tempor nec feugiat. Metus aliquam eleifend mi in nulla posuere sollicitudin aliquam. Nunc vel risus commodo viverra maecenas accumsan lacus>';
+}

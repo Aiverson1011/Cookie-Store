@@ -4,6 +4,7 @@
         <title>The Cookie Shop</title>
 
         <link href="style.css" rel="stylesheet">
+        <script src="app.js"></script>
         
         <!-- CSS and JS links in here -->
     </head>
@@ -20,7 +21,7 @@
             </nav>
         </header>
         <main>
-            <h2><script src="app.js"></script></h2>
+            <h2>Hello <script>document.write(yourName())</script>!</h2>
             <img id="hero" alt="This is a chocolate chip cookie" src="https://th.bing.com/th/id/OIP.NdttYsgT0bIbON515f9wSgHaLG?pid=ImgDet&rs=1" >
        <ul>
            <li><img src="images/cookie1.jpg" alt="decadent cookies" /></li>
@@ -30,11 +31,13 @@
 
        </ul>
 
-       <p> <strong>text is strong</strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mauris nunc congue nisi vitae. Sit amet dictum sit amet. Non sodales neque sodales ut etiam sit amet nisl. Scelerisque viverra mauris in aliquam sem fringilla ut. Aliquet risus feugiat in ante. Vitae suscipit tellus mauris a diam maecenas sed enim ut. Nisl nisi scelerisque eu ultrices. In massa tempor nec feugiat. Metus aliquam eleifend mi in nulla posuere sollicitudin aliquam. Nunc vel risus commodo viverra maecenas accumsan lacus</p>
+       <p> <script>document.write(tellMeAStory())</script></p>
+       <p><script>document.write(timeOfDay())</script></p>
         </main>
 
         <footer>
             <p>&copy; 2022 The Cookie Shop</p> 
         </footer>
+
     </body>
 </html>
