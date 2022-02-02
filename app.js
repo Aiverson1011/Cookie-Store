@@ -2,23 +2,40 @@
 
 //////////////////
 // define the variable named "name" and set the value to the user input of the prompt
-function yourName(){
-    let name = prompt('What is your name?');
-    console.log('Hello, ' + name);
+function yourName() {
+    let name;
+    do {
+        name = prompt('What is my name?');
+        console.log('try again');
+    } while (name !== 'amanda')
+
     return name;
 }
 
+function guessANumber() {
+    let answer;
 
-function timeOfDay(){
+    do {
+        answer = prompt('Guess a number between 1-10');
+        if (answer != 7) {
+            alert('try again!')
+        } else {
+            alert('you are correct!');
+        }
+
+    } while (answer != 7)
+}
+
+function timeOfDay() {
     let time = prompt('What time is it?'); // 15;
     let message = '';
-    
-    if(time <= 11){
+
+    if (time <= 11) {
         message = 'Good Morning!';
-    } else if (time <= 18){
+    } else if (time <= 18) {
         message = 'Good Afternoon!';
-      
-    }  else if(time <= 24){
+
+    } else if (time <= 24) {
         message = "Good Evening!";
     } else {
         message = "Time does not exist!";
@@ -27,7 +44,17 @@ function timeOfDay(){
     return message;
 }
 
-function tellMeAStory(){
+function displayRating() {
 
-    return 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mauris nunc congue nisi vitae. Sit amet dictum sit amet. Non sodales neque sodales ut etiam sit amet nisl. Scelerisque viverra mauris in aliquam sem fringilla ut. Aliquet risus feugiat in ante. Vitae suscipit tellus mauris a diam maecenas sed enim ut. Nisl nisi scelerisque eu ultrices. In massa tempor nec feugiat. Metus aliquam eleifend mi in nulla posuere sollicitudin aliquam. Nunc vel risus commodo viverra maecenas accumsan lacus>';
+    let output = '';
+    let rating = prompt('scale of 1-5, how many stars?');
+    for(let i = 0; i < rating; i++){
+        output = output + "<img class='star' src='images/star.png'/>";
+    }
+
+    // <img class='star' src='images/star.png'/><img class='star' src='images/star.png'/><img class='star' src='images/star.png'/>
+
+    return document.write(output);
 }
+
+guessANumber();
